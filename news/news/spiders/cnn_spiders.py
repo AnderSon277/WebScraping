@@ -9,14 +9,14 @@ class NewsSpider(scrapy.Spider):
     name = 'news_cnn'
     allowed_domains = ['cnnespanol.cnn.com/']
     start_urls = [
-    'https://cnnespanol.cnn.com/'
+    'https://cnnespanol.cnn.com/',
     'https://cnnespanol.cnn.com/seccion/mundo/',
     'https://cnnespanol.cnn.com/seccion/latinoamerica/',
     'https://cnnespanol.cnn.com/seccion/estados-unidos/',
     'https://cnnespanol.cnn.com/seccion/mundo/',
     'https://cnnespanol.cnn.com/seccion/economia-y-negocios/',
     'https://cnnespanol.cnn.com/seccion/entretenimiento/',
-    'https://cnnespanol.cnn.com/seccion/tecnologia/'.
+    'https://cnnespanol.cnn.com/seccion/tecnologia/',
     'https://cnnespanol.cnn.com/seccion/deportes/',
     'https://cnnespanol.cnn.com/seccion/viajes-y-turismo/',
     'https://cnnespanol.cnn.com/seccion/salud/',
