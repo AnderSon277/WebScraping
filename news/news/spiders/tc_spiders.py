@@ -6,7 +6,7 @@ from news.items import NewsItem
 
 
 class NewsSpider(scrapy.Spider):
-    name = 'news'
+    name = 'news_tc'
     allowed_domains = ['tctelevision.com/']
     start_urls = [
     'https://www.tctelevision.com/programa/el-noticiero',
