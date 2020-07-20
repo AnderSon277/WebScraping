@@ -30,5 +30,5 @@ class NewsSpider(scrapy.Spider):
         item=NewsItem()
         for headline in headlines:
             item['title']=headline.xpath('span/a/text()').extract()[0]
-            item['url']=headline.xpath('span/a/@href').extract()[0]
+            item['url']='https://www.ecuavisa.com'+headline.xpath('span/a/@href').extract()[0]
             yield item
