@@ -15,6 +15,13 @@ class NewsSpider(scrapy.Spider):
     'https://www.eltelegrafo.com.ec/contenido/categoria/6/sociedad',
     'https://www.eltelegrafo.com.ec/contenido/categoria/1/tecnologia'
     ]
+    for i in range(1,11):
+        k=i*12
+        start_urls.append('https://www.eltelegrafo.com.ec/contenido/categoria/1/politica?start='+str(k))
+        start_urls.append('https://www.eltelegrafo.com.ec/contenido/categoria/1/pedro-el-economista?start='+str(k))
+        start_urls.append('https://www.eltelegrafo.com.ec/contenido/categoria/1/futbol-internacional?start='+str(k))
+        start_urls.append('https://www.eltelegrafo.com.ec/contenido/categoria/6/sociedad?start='+str(k))
+        start_urls.append('https://www.eltelegrafo.com.ec/contenido/categoria/1/tecnologia?start='+str(k))
 
     def parse(self, response):
         headlines=Selector(response).xpath('//div[@class="col-xs-8"]')

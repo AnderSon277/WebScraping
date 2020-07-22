@@ -10,6 +10,9 @@ class NewsSpider(scrapy.Spider):
     allowed_domains = ['elcomercio.com']
     start_urls = [
     'https://www.elcomercio.com/actualidad',
+    'https://www.elcomercio.com/venezolanos-en-ecuador',
+    'https://www.elcomercio.com/periodistas-en-la-frontera-norte',
+    'https://www.elcomercio.com/deportes',
     'https://www.elcomercio.com/data',
     'https://www.elcomercio.com/tendencias',
     ]
