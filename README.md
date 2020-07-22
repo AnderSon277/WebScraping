@@ -2,7 +2,7 @@
 
 <<<<<<< HEAD
 
- scrapy crawl news_tg -o news_tg.json -t json
+scrapy crawl news_ta -o news_ta.json -t json
 =======
 1.- Recopilar datos de la página y enviarlo a archivo json
 scrapy crawl [news..] -o [news..].json -t json
