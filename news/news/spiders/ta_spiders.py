@@ -7,7 +7,7 @@ from news.items import NewsItem
 
 class NewsSpider(scrapy.Spider):
     name = 'news_ta'
-    allowed_domains = ['tctelevision.com/']
+    allowed_domains = ['www.teleamazonas.com/']
     start_urls = [
     'http://www.teleamazonas.com/noticiero-24-horas/noticias-nacionales/',
     'http://www.teleamazonas.com/noticiero-24-horas/noticias-internacionales/',
