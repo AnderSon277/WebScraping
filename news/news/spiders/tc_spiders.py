@@ -9,6 +9,7 @@ class NewsSpider(scrapy.Spider):
     name = 'news_tc'
     allowed_domains = ['tctelevision.com/']
     start_urls = [
+    'https://www.tctelevision.com/noticias',
     'https://www.tctelevision.com/programa/el-noticiero',
     'https://www.tctelevision.com/cronica',
     'https://www.tctelevision.com/ciencia-tecnologia',
@@ -19,6 +20,26 @@ class NewsSpider(scrapy.Spider):
     'https://www.tctelevision.com/entretenimiento',
     'https://www.tctelevision.com/tags/coronavirus'
     ]
+    #Add all pages
+    for i in range(2,876):
+        start_urls.append('https://www.tctelevision.com/noticias/page/'+str(i))
+    for i in range(2,952):
+        start_urls.append('https://www.tctelevision.com/programa/el-noticiero/page/'+str(i))
+    for i in range(2,117):
+        start_urls.append('https://www.tctelevision.com/cronica/page/'+str(i))
+    for i in range(2,30):
+        start_urls.append('https://www.tctelevision.com/ciencia-tecnologia/page/'+str(i))
+    for i in range(2,124):
+        start_urls.append('https://www.tctelevision.com/politica/page/'+str(i))
+    for i in range(2,52):
+        start_urls.append('https://www.tctelevision.com/tendencias/page/'+str(i))
+    for i in range(2,389):
+        start_urls.append('https://www.tctelevision.com/comunidad/page/'+str(i))
+    for i in range(2,87):
+        start_urls.append('https://www.tctelevision.com/deportes/page/'+str(i))
+    for i in range(2,76):
+        start_urls.append('https://www.tctelevision.com/entretenimiento/page/'+str(i))
+        
 
     def parse(self, response):
         headlines=Selector(response).xpath('//div[@class="qt-itemcontents"]')

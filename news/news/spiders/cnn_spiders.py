@@ -23,7 +23,12 @@ class NewsSpider(scrapy.Spider):
     'https://cnnespanol.cnn.com/seccion/estilo/',
     'https://cnnespanol.cnn.com/seccion/opinion/',
     'https://cnnespanol.cnn.com/radio/',
-    'https://cnnespanol.cnn.com/especiales/'
+    'https://cnnespanol.cnn.com/especiales/',
+    'https://cnnespanol.cnn.com/category/africa/',
+    'https://cnnespanol.cnn.com/category/asia/',
+    'https://cnnespanol.cnn.com/category/espana/',
+    'https://cnnespanol.cnn.com/category/europa/',
+    'https://cnnespanol.cnn.com/category/medio-oriente/'
     ]
 
     def parse(self, response):
